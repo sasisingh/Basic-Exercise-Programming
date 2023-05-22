@@ -1,0 +1,42 @@
+<!-- Create a program to enter two numbers from a form and calculate its sum after submitting the  button. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>Enter first Number</td>
+            <td><input type="number" id="first" /></td>
+        </tr>
+        <tr>
+            <td> Enter second Number</td>
+            <td> <input type="number" id="second" /></td>
+        </tr>
+        <tr>
+            <td><button onclick="demo()">Add</button></td>
+            <td> <b id="res"></b></td>
+        </tr>
+
+    </table>
+    <script>
+        function demo() {
+            var first = document.getElementById("first").value
+            var second = document.getElementById("second").value
+            var result = parseInt(first) + parseInt(second)
+            var add = document.getElementById("res")
+            add.innerHTML = `Addition is ${result}`
+        }
+
+
+    </script>
+</body>
+
+</html>

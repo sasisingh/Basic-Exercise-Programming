@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>First Number</td>
+            <td><input type="number" id="num1" /></td>
+        </tr>
+        <tr>
+            <td>Second Number</td>
+            <td><input type="number" id="num2" /></td>
+        </tr>
+        <tr>
+            <td>No od Odd</td>
+            <td id="odd"></td>
+        </tr>
+        <tr>
+            <td>No of Even</td>
+            <td id="even"></td>
+        </tr>
+        <tr>
+            <td><button onclick="calculate()">CALCULATE</button></td>
+        </tr>
+    </table>
+    <script>
+        var num1 = document.getElementById("num1")
+        var num2 = document.getElementById("num2")
+        var odd = document.getElementById("odd")
+        var even = document.getElementById("even")
+        function calculate() {
+            console.log("odd number")
+            for (var i = parseInt(num1.value); i <= parseInt(num2.value); i++) {
+                if (i % 2 != 0) {
+                    odd.innerHTML = "odd number " + i
+                    console.log(i)
+                }
+            }
+            console.log("even number")
+            for (var i = parseInt(num1.value); i <= parseInt(num2.value); i++) {
+                if (i % 2 == 0) {
+                    even.innerHTML = "even number " + i
+                    console.log(i)
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

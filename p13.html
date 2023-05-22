@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>Enter Number</td>
+            <td><input type="number" id="num1" /></td>
+        </tr>
+        <tr>
+            <td>Reverse</td>
+            <td id="reverse"></td>
+        </tr>
+        <tr>
+            <td><button onclick="reverse()">Result</button></td>
+
+        </tr>
+    </table>
+    <script>
+        function reverse() {
+            var num1 = document.getElementById("num1")
+            var reverse = document.getElementById("reverse")
+            var rev = 0 
+
+            var txt = (num1.value)
+           
+            while (txt!= 0) {
+                var rem = txt % 10;
+                rev=(rev*10)+rem
+                 txt=parseInt(txt/10)
+            }
+            reverse.innerHTML=`${rev}`    
+        }
+    </script>
+</body>
+
+</html>

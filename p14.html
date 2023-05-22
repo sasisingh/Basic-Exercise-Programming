@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>Enter Number</td>
+            <td><input type="number" id="num1" /></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td id="status"></td>
+        </tr>
+        <tr>
+            <td><button onclick="result()">Result</button></td>
+            <td id="res"></td>
+        </tr>
+    </table>
+    <script>
+        function result() {
+            var num1 = document.getElementById("num1")
+            var txt1 = num1.value  
+            var res = document.getElementById("res")
+            var sum = 0;
+            var temp=txt1
+            while(txt1!=0){
+                var rem=txt1%10;
+                sum=sum*10+rem
+                txt1=parseInt(txt1/10)
+            }
+            if (temp==sum) {
+                var status = document.getElementById("status")
+                status.innerHTML=` Palindrome Number `
+                res.innerHTML=`${num1.value} is palindrome number`
+            }
+            else {
+                var status = document.getElementById("status")
+                status.innerHTML=` Not Palindrome Number `
+                res.innerHTML=`${num1.value} is not palindrome number`
+            }
+        }
+    </script>
+</body>
+
+</html>

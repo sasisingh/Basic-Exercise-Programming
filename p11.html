@@ -1,0 +1,46 @@
+
+<!-- Create a program to enter a number  and check the entered number is Odd or Even then display it in the Status  field. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Enter Number</td>
+            <td><input type="number" id="num1"/></td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td id="status"></td>
+        </tr>
+        <tr>
+            <td><button onclick="status()">Result</button></td>
+            <td id="res"></td>
+        </tr>
+    </table>
+    <script>
+        function status(){
+            var num=document.getElementById("num1")
+            var txt=num.value
+            var status=document.getElementById("status")
+            var res=document.getElementById("res")
+            if(txt%2==0){
+            status.innerText=`Even Number`
+            res.innerHTML=`${txt} is even number`
+            }
+            else{
+                status.innerText=`odd Number`
+                res.innerHTML=`${txt} is odd number`
+            }
+        }
+       
+      
+    </script>
+</body>
+</html>

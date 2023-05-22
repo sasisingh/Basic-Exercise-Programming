@@ -1,0 +1,49 @@
+<!-- Create a program to enter a number  and check the entered number is Prime or Not  then display it in the Status  field. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Enter Number</td>
+            <td><input type="number" id="num1"/></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td id="status"></td>
+        </tr>
+        <tr>
+            <td><button onclick="result()">Result</button></td>
+            <td id="res"></td>
+        </tr>
+    </table>
+    <script>
+       function result(){
+        var count=0
+        var num1=document.getElementById("num1");
+        var txt1=num1.value
+        var status=document.getElementById("status");
+        var res=document.getElementById("res")
+        for(var i=1;i<=txt1;i++){
+            if(txt1%i==0){
+                count ++;
+            }
+        }
+        if(count==2){
+            status.innerHTML=`Prime Number`
+            res.innerHTML=`${txt1} is Prime Number`
+        }
+        else{
+            status.innerHTML=`Not a Prime Number`
+            res.innerHTML=`${txt1} is Not a Prime Number`
+        }
+       }
+    </script>
+</body>
+</html>
